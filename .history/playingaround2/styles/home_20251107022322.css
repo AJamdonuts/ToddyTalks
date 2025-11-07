@@ -5,7 +5,7 @@ body {
   align-items: center;
   text-align: center;
   font-family: Arial, sans-serif, 'ToddyTalks';
-  background-image: url('/playingaround2/images/backgrounds/stars.png');  /* image behind wrapper */
+  background-image: url(/playingaround2/images/backgrounds/stars.png);
   background-position-x: initial;
   background-position-y: initial;
   background-size: initial;
@@ -20,8 +20,9 @@ body {
 header {
   text-align: center;
   margin: 20px auto;
-  width: 100%;
+  width: 80%;
   border-radius: 15px;
+  padding: 2px;
   background-image: url(/playingaround2/images/backgrounds/angelclouds.gif);
 
   background-position: center;
@@ -79,7 +80,8 @@ header h1 {
 main {
   text-align: center;
   margin: 20px auto;              /* space around the box */
-  width: 100%;                     /* take up 100% of the screen width */
+  width: 80%;                     /* take up 80% of the screen width */           /* rounded corners */
+  padding: 10px;                  /* inner space inside the box */
 }
 
 .image-links {
@@ -87,85 +89,59 @@ main {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  margin: 20px auto;              /* space around the box */         
+  background-color: white;
+  margin: 20px auto;              /* space around the box */                  /* take up 80% of the screen width */
   border-radius: 15px;            /* rounded corners */
   padding: 20px; 
 }
 
 .image-links img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 30px;
+  border-radius: 8px;
   transition: transform 0.3s;
-  background-color: wheat;
 }
 
 .image-links img:hover {
   transform: scale(1.05);
 }
 
+/* Footer styles */
 footer {
-  background-color: white;
-  border-radius: 15px;
-  box-sizing: border-box;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between; /* text left, image right */
-  align-items: center;           /* vertically center text & image */
-}
-
-.footer-text {
+  background-color:white;
   color: black;
-  font-weight: bold;
-  font-size: 1rem;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  width: 80%; 
+  border-radius: 15px;                   
 }
 
 .footer-img {
-  width: 150px;                     /* size of your image */
-  height: auto;
-  cursor: pointer;                 /* shows it’s clickable */
-  transition: transform 0.3s;
-  padding: 0%;
-  margin: 0%;
-}
-
-.footer-img:hover {
-  transform: scale(1.1);           /* optional hover effect */
+  width: 50px;
+  margin-top: 10px;
 }
 
 /* Divider Image Between Sections */
 .section-divider {
   text-align: center;
+  margin: 20px 0; /* space above and below */
 }
 
 .section-divider {
-  width: 100%;                 /* full width of the screen */
+  width: 80%;                 /* full width of the screen */
   height: 200px;               /* adjust height as needed */
   background-image: url('/playingaround2/images/IMG_0227.PNG');  /* your divider image */
   background-repeat: repeat-x;            /* repeat horizontally */
   background-position: top center;        /* aligns image at top */
-  background-size: auto 300px;
+  background-size: auto 100%;
   transform: scaleX(-1);             /* keep aspect ratio, stretch height */                      /* space above/below */
 }
 
 
-.site-wrapper {
-  border-radius: 20px;       /* rounded corners for the whole site */            /* inner spacing */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.page-background {
-  width: 80%;
-  background-image: url('/playingaround2/images/backgrounds/gingham06.png');
-  background-repeat: repeat; 
-  background-size: 25px 25px; 
-  border-radius: 20px;
 
 
-}
 
   /*FONTS*/
 
@@ -179,40 +155,4 @@ footer {
 @keyframes swap {
   0%, 45% { opacity: 1; }
   50%, 95% { opacity: 0; }
-}
-
-
-
-/* Kawaii Container */
-
-.kawaiicontainer {
-    width: 20px;
-    height: 20px;
-    position:absolute;
-    top: 0;
-    left: 0px;
-}
-
-@keyframes float {
-	0% {
-		box-shadow: 0 0px 0px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 0px 0px 0px rgba(0,0,0,0.2);
-		transform: translatey(-20px);
-	}
-	100% {
-		box-shadow: 0 0px 0px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-}
-
-.balloons {
-    position:absolute;
-    top: -75px;
-    left:800px;
-    height: 450px;
-    filter: brightness(120%);
-    animation: float 6s ease-in-out infinite;
 }

@@ -22,6 +22,7 @@ header {
   margin: 20px auto;
   width: 100%;
   border-radius: 15px;
+  padding: 2px;
   background-image: url(/playingaround2/images/backgrounds/angelclouds.gif);
 
   background-position: center;
@@ -87,53 +88,37 @@ main {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  background-color: white;
   margin: 20px auto;              /* space around the box */         
   border-radius: 15px;            /* rounded corners */
   padding: 20px; 
 }
 
 .image-links img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 30px;
+  border-radius: 8px;
   transition: transform 0.3s;
-  background-color: wheat;
 }
 
 .image-links img:hover {
   transform: scale(1.05);
 }
 
+/* Footer styles */
 footer {
-  background-color: white;
-  border-radius: 15px;
-  box-sizing: border-box;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between; /* text left, image right */
-  align-items: center;           /* vertically center text & image */
-}
-
-.footer-text {
+  background-color:white;
   color: black;
-  font-weight: bold;
-  font-size: 1rem;
+  text-align: center;
+  margin-top: 50px;
+  width: 100%; 
+  border-radius: 15px;                   
 }
 
 .footer-img {
-  width: 150px;                     /* size of your image */
-  height: auto;
-  cursor: pointer;                 /* shows it’s clickable */
-  transition: transform 0.3s;
-  padding: 0%;
-  margin: 0%;
-}
-
-.footer-img:hover {
-  transform: scale(1.1);           /* optional hover effect */
+  width: 50px;
+  margin-top: 10px;
 }
 
 /* Divider Image Between Sections */
@@ -147,7 +132,7 @@ footer {
   background-image: url('/playingaround2/images/IMG_0227.PNG');  /* your divider image */
   background-repeat: repeat-x;            /* repeat horizontally */
   background-position: top center;        /* aligns image at top */
-  background-size: auto 300px;
+  background-size: auto 100%;
   transform: scaleX(-1);             /* keep aspect ratio, stretch height */                      /* space above/below */
 }
 
@@ -179,40 +164,4 @@ footer {
 @keyframes swap {
   0%, 45% { opacity: 1; }
   50%, 95% { opacity: 0; }
-}
-
-
-
-/* Kawaii Container */
-
-.kawaiicontainer {
-    width: 20px;
-    height: 20px;
-    position:absolute;
-    top: 0;
-    left: 0px;
-}
-
-@keyframes float {
-	0% {
-		box-shadow: 0 0px 0px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 0px 0px 0px rgba(0,0,0,0.2);
-		transform: translatey(-20px);
-	}
-	100% {
-		box-shadow: 0 0px 0px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-}
-
-.balloons {
-    position:absolute;
-    top: -75px;
-    left:800px;
-    height: 450px;
-    filter: brightness(120%);
-    animation: float 6s ease-in-out infinite;
 }

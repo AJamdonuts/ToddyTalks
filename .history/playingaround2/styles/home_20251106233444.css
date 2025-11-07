@@ -1,0 +1,143 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, sans-serif, 'ToddyTalks';
+    background-image: url(/playingaround2/images/backgrounds/stars.png);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    font-weight: 800;
+    
+}
+
+header {
+  text-align: center;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 15px;
+  padding: 2px;
+  background-image: url(/playingaround2/images/backgrounds/angelclouds.gif);
+
+  background-position: center;
+  box-shadow: 0 20px 10px rgba(0,0,0,0.1);
+  
+  /* Flex to center content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* IMAGE CONTAINER */
+.header-images {
+  position: relative;       /* creates a frame for absolute children */
+  width: 60px;               /* how wide the image area is */
+  max-width: 60px;         /* don’t let it grow too large */ 
+  overflow: hidden;
+  height: 60px;              /* fixed height */
+}
+
+/* BOTH IMAGES STACKED ON TOP OF EACH OTHER */
+.header-images img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;              /* fill container */
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;               /* start hidden */
+  animation: swap 6s infinite; /* 6-second repeating animation */
+  transition: opacity 1s;
+}
+
+/* First image visible first */
+.header-images .img1 {
+  animation-delay: 0s;
+}
+
+/* Second image appears halfway through */
+.header-images .img2 {
+  animation-delay: 3s;
+}
+
+
+header h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'ToddyTalks';
+    color: burlywood;
+    text-shadow: 1px 6px brown;
+    letter-spacing: 10px;
+}
+
+/* Main section styles */
+main {
+  text-align: center;
+  margin: 20px auto;              /* space around the box */
+  width: 80%;                     /* take up 80% of the screen width */           /* rounded corners */
+  padding: 20px;                  /* inner space inside the box */
+}
+
+.image-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: white;
+  margin: 20px auto;              /* space around the box */                  /* take up 80% of the screen width */
+  border-radius: 15px;            /* rounded corners */
+  padding: 20px; 
+}
+
+.image-links img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.image-links img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer styles */
+footer {
+  background-color:white;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  width: 80%; 
+  border-radius: 15px;                   
+}
+
+.footer-img {
+  width: 50px;
+  margin-top: 10px;
+}
+
+
+  /*FONTS*/
+
+@font-face {
+  font-family: ToddyTalks; /* set name */
+  src: url(/playingaround2/fonts/akaDylan\ Plain.ttf); /* url of the font */
+}
+
+
+ /* ANIMATION */
+@keyframes swap {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0; }
+}

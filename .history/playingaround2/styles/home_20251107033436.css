@@ -180,39 +180,3 @@ footer {
   0%, 45% { opacity: 1; }
   50%, 95% { opacity: 0; }
 }
-
-
-
-/* Kawaii Container */
-
-.kawaiicontainer {
-    width: 20px;
-    height: 20px;
-    position:absolute;
-    top: 0;
-    left: 0px;
-}
-
-@keyframes float {
-	0% {
-		box-shadow: 0 0px 0px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 0px 0px 0px rgba(0,0,0,0.2);
-		transform: translatey(-20px);
-	}
-	100% {
-		box-shadow: 0 0px 0px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-}
-
-.balloons {
-    position:absolute;
-    top: -75px;
-    left:800px;
-    height: 450px;
-    filter: brightness(120%);
-    animation: float 6s ease-in-out infinite;
-}
