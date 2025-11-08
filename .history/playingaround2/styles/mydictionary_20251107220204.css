@@ -1,0 +1,332 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: white;
+
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px);
+  
+  background-size: 40px 40px; /* size of each grid square */
+}
+
+.library-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  margin-bottom: 2em;
+}
+
+.library-card-header h1 {
+  margin: 0 0 1rem 0;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.card-info label {
+  font-weight: bold;
+}
+
+#user-name {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+.license-label {
+  font-size: 1rem;
+  color: #444;
+}
+
+.clickable-row {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clickable-row:hover {
+  background-color: #fff8dc;
+}
+
+
+.notepad-wrapper {
+  position: relative;
+  width: 90vw;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.notepad-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.table-overlay {
+  position: absolute;
+  top: 33%; /* Adjust this based on where you want the table to sit on the image */
+  left: 11%; /* Center or align based on image design */
+  width: 90%;
+  z-index: 1;
+  pointer-events: auto; /* Allows clicks to pass through to the image */
+}
+
+.notepad-table {
+  width: 87%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.3); /* optional */
+}
+
+.notepad-table th,
+.notepad-table td {
+  border: 1px solid #888;
+  padding: 12px;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: 'Courier New', monospace;
+}
+
+.notepad-table td {
+  white-space: nowrap;
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 0.7rem; /* body cell size */
+  white-space: nowrap;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.notepad-table th {
+  font-size: 1rem; /* header size */
+}
+
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 2px solid #333;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1000;
+  width: 500px;
+}
+
+.popup-overlay.small {
+  top: 25%;
+  width: 300px;
+  z-index: 1100;
+}
+
+.popup-content {
+  position: relative;
+  padding: 40px;
+  background: white;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.comment-display {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.comment-display p {
+  flex: 1;
+  max-width: 70%; /* Control width of the comment box */
+  min-height: 60px;
+  background: #f3f3f3;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+  overflow-wrap: break-word;
+  box-sizing: border-box;   /* ensure padding doesn’t break layout */
+  user-select: text;        /* allow text selection, but no editing */
+  cursor: default;          /* normal cursor */
+}
+
+.comment-display img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+textarea {
+  width: 100%;
+  height: 60px;
+}
+
+.star-rating {
+  color: gold;
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+.star-rating.empty {
+  color: lightgray;
+}
+
+.tally-group {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  height: 32px;
+  margin-right: 5px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.tally-bar {
+  display: inline-block;
+  width: 2px;
+  height: 30px;
+  background-color: black;
+  margin-right: 3px;
+}
+
+.tally-bar.diagonal {
+  position: absolute;
+  width: 2px;
+  height: 25px;
+  background-color: black;
+  transform: rotate(50deg);
+  top: -2px; /* Adjust this based on appearance */
+  left: -2px;
+  transform-origin: bottom left;
+}
+
+.tally-group {
+  font-size: 0; /* removes unwanted spacing between inline-blocks */
+}
+
+.tally-bar {
+  vertical-align: bottom;
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 10;
+  line-height: 1;
+}
+.close-button:hover {
+  color: #c00;
+  transform: scale(1.2);
+}
+.popup-content {
+  position: relative; /* establish positioning context */
+  /* your existing styles */
+}
+
+#popup-word-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 300px; /* match comment width */
+  margin-bottom: 8px; /* space below word input */
+  margin-left: 125px;
+  word-wrap: break-word; /* ensure long words wrap */
+}
+
+#popup-word-label {
+  color: gray;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 2px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+#popup-word-input {
+  display: none;
+  width: 70%;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  padding: 10px 10px;
+  margin-top: 2px;
+  background: transparent;
+}
+
+#popup-comment-display {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+#popup-comment-display img#avatar-image {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  transition: box-shadow 0.3s ease;
+}
+
+#popup-comment-display img#avatar-image:hover {
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+#popup-comment-display input#avatar-upload {
+  display: none;
+}
+
+#comment-text-display {
+  flex: 1;
+  background: #f3f3f3;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+  word-wrap: break-word;
+}
+
+.popup-buttons button:last-child {
+  background-color: #ffe08a;
+  border: 2px solid #d6a44a;
+  font-weight: bold;
+}

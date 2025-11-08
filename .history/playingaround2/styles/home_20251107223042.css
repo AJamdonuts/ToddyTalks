@@ -1,0 +1,218 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif, 'ToddyTalks';
+  background-image: url('/playingaround2/images/backgrounds/stars.png');  /* image behind wrapper */
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  font-weight: 800;
+}
+
+header {
+  text-align: center;
+  margin: 20px auto;
+  width: 100%;
+  border-radius: 15px;
+  background-image: url(/playingaround2/images/backgrounds/angelclouds.gif);
+
+  background-position: center;
+  box-shadow: 0 20px 10px rgba(0,0,0,0.1);
+  
+  /* Flex to center content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* IMAGE CONTAINER */
+.header-images {
+  position: relative;       /* creates a frame for absolute children */
+  width: 120px;               /* how wide the image area is */
+  max-width: 120px;         /* don’t let it grow too large */ 
+  overflow: hidden;
+  height: 120px;              /* fixed height */
+}
+
+/* BOTH IMAGES STACKED ON TOP OF EACH OTHER */
+.header-images img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;              /* fill container */
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;               /* start hidden */
+  animation: swap 6s infinite; /* 6-second repeating animation */
+  transition: opacity 1s;
+}
+
+/* First image visible first */
+.header-images .img1 {
+  animation-delay: 0s;
+}
+
+/* Second image appears halfway through */
+.header-images .img2 {
+  animation-delay: 3s;
+}
+
+
+header h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'ToddyTalks';
+    color: burlywood;
+    text-shadow: 1px 6px brown;
+    letter-spacing: 10px;
+}
+
+/* Main section styles */
+main {
+  text-align: center;
+  margin: 20px auto;              /* space around the box */
+  width: 100%;                     /* take up 100% of the screen width */
+}
+
+.image-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px auto;              /* space around the box */         
+  border-radius: 15px;            /* rounded corners */
+  padding: 20px; 
+}
+
+.image-links img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 30px;
+  transition: transform 0.3s;
+  background-color: wheat;
+}
+
+.image-links img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: white;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* text left, image right */
+  align-items: center;           /* vertically center text & image */
+}
+
+.footer-text {
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.footer-img {
+  width: 150px;                     /* size of your image */
+  height: auto;
+  cursor: pointer;                 /* shows it’s clickable */
+  transition: transform 0.3s;
+  padding: 0%;
+  margin: 0%;
+}
+
+.footer-img:hover {
+  transform: scale(1.1);           /* optional hover effect */
+}
+
+/* Divider Image Between Sections */
+.section-divider {
+  text-align: center;
+}
+
+.section-divider {
+  width: 100%;                 /* full width of the screen */
+  height: 200px;               /* adjust height as needed */
+  background-image: url('/playingaround2/images/IMG_0227.PNG');  /* your divider image */
+  background-repeat: repeat-x;            /* repeat horizontally */
+  background-position: top center;        /* aligns image at top */
+  background-size: auto 300px;
+  transform: scaleX(-1);             /* keep aspect ratio, stretch height */                      /* space above/below */
+}
+
+
+.site-wrapper {
+  border-radius: 20px;       /* rounded corners for the whole site */            /* inner spacing */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.page-background {
+  width: 80%;
+  background-image: url('/playingaround2/images/backgrounds/gingham06.png');
+  background-repeat: repeat; 
+  background-size: 25px 25px; 
+  border-radius: 20px;
+
+
+}
+
+  /*FONTS*/
+
+@font-face {
+  font-family: ToddyTalks; /* set name */
+  src: url(/playingaround2/fonts/akaDylan\ Plain.ttf); /* url of the font */
+}
+
+
+ /* ANIMATION */
+@keyframes swap {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0; }
+}
+
+
+
+/* Kawaii Container */
+
+.kawaiicontainer {
+    width: 20px;
+    height: 20px;
+    position:absolute;
+    top: 0;
+    left: 0px;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 0px 0px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 0px 0px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 0px 0px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.balloons {
+    position:absolute;
+    top: -75px;
+    left:800px;
+    height: 450px;
+    filter: brightness(120%);
+    animation: float 6s ease-in-out infinite;
+}

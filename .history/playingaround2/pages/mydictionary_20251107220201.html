@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="/playingaround2/styles/mydictionary.css" />
+</head>
+<body>
+    <div class="library-card-header">
+        <h1>Library Card</h1>
+        <div class="card-info">
+          <label>Name:</label>
+          <span id="user-name" style="cursor:pointer;">Guest</span>
+
+
+
+            <span class="license-label">Licence: <strong id="license-status">Baby</strong></span>
+        </div>
+    </div>
+    <div class="notepad-wrapper">
+        <img src="/playingaround2/images/ -17.png" class="notepad-image" alt="Notepad background" />
+     <div class="table-overlay">
+        <table class="notepad-table">
+        <thead>
+          <tr>
+            <th>Score</th>
+            <th>Word</th>
+            <th>Date</th>
+            <th>Used</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="clickable-row">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="clickable-row">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <!-- More rows -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<div class="popup-overlay" id="popup">
+  <div class="popup-content">
+    <button class="close-button" onclick="closePopup()"></button>
+    <div id="popup-word-container">
+      <span id="popup-word-label">WORD</span>
+      <input type="text" id="popup-word-input" />
+    </div>
+
+    <!-- Comment Display Area -->
+    <div id="popup-comment-display" class="comment-display">
+      <img src="../images/avatar.png" alt="avatar" id="avatar-image"/>
+      <p id="comment-text-display">No comment yet</p></textarea>
+      <input type="file" id="avatar-upload" accept="image/*" />
+    </div>
+
+
+    <!-- Data Display Areas -->
+    <div id="rating-display"></div>
+    <div id="tally-display"></div>
+
+    <!-- Buttons Row -->
+    <div class="popup-buttons">
+      <button type="button" onclick="openMiniPopup('rating')">Rating</button>
+      <button type="button" onclick="openMiniPopup('comment')">Comment</button>
+      <button type="button" onclick="openMiniPopup('tally')">Tally</button>
+      <button type="button" onclick="saveWord()">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- Mini Popup -->
+<div class="popup-overlay small" id="mini-popup">
+  <div class="popup-content">
+    <h3 id="mini-title">Add Comment</h3>
+    <form id="mini-form">
+      <textarea id="mini-input" placeholder="Type here..."></textarea>
+      <div class="popup-buttons">
+        <button type="submit">Save</button>
+        <button type="button" onclick="closeMiniPopup()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+<!-- Login Popup -->
+
+<div id="login-popup" class="popup-overlay" style="display:none;">
+  <div class="popup-content">
+    <h2>Login</h2>
+    <input type="email" id="login-email" placeholder="Email" />
+    <input type="password" id="login-password" placeholder="Password" />
+    <div class="popup-buttons">
+      <button type="button" id="login-btn">Login</button>
+      <button type="button" id="open-signup-btn">Sign Up</button>
+      <button type="button" id="cancel-login-btn">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- Sign Up Popup -->
+<div id="signup-popup" class="popup-overlay" style="display:none;">
+  <div class="popup-content">
+    <h2>Sign Up</h2>
+    <input type="text" id="signup-name" placeholder="Full Name" />
+    <input type="email" id="signup-email" placeholder="Email" />
+    <input type="password" id="signup-password" placeholder="Password" />
+    <div class="popup-buttons">
+      <button type="button" id="signup-btn">Sign Up</button>
+      <button type="button" id="cancel-signup-btn">Cancel</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script type="module" src="/playingaround2/javascript/librarycard.js"></script>
+</body>
+</html>
