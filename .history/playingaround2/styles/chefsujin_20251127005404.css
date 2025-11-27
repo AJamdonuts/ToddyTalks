@@ -138,63 +138,12 @@ main {
     transform: rotate(17.63deg);
     }
 
-
-
-.recipebook-link {
-    position: absolute; /* Keep existing positioning */
+.recipebook {
+    position: absolute;
     width: 300px;
     height: 300px;
     left: 90px;
     top: 302px;
-    cursor: pointer;
-    overflow: visible; /* Ensure glow/text isn't clipped by its own boundaries */
-    z-index: 100; /* Ensure the button and its effects are above other canvas items */
-    transition: box-shadow 0.3s ease-out;
-}
-
-/* Optional: Slightly scale the image on hover for a subtle effect */
-.recipebook-link:hover .recipebook {
-    transform: scale(1.03);
-    transition: transform 0.3s ease-out;
-}
-
-.recipebook-link:hover {
-    box-shadow: 
-        0 0 15px 10px rgba(255, 255, 0, 0.7), /* Yellowish glow */
-        0 0 30px 10px rgba(255, 255, 0, 0.4);
-}
-
-.recipebook-link::after {
-    content: "Open Recipe Book"; /* The text that appears on hover */
-    position: absolute;
-    bottom: 100%; /* Places it just above the link */
-    left: 50%;
-    transform: translateX(-50%) translateY(-10px); /* Center it and add slight offset */
-    background-color: rgba(0, 0, 0, 0.7); /* Dark background for readability */
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    white-space: nowrap; /* Keep text on one line */
-    
-    opacity: 0; /* Hidden by default */
-    visibility: hidden; /* Hidden by default */
-    transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s;
-    
-    /* Ensure text is above everything else */
-    z-index: 200; 
-}
-
-.recipebook-link:hover::after {
-    opacity: 1; /* Make visible on hover */
-    visibility: visible; /* Make visible on hover */
-    transform: translateX(-50%) translateY(0); /* Move into final position */
-}
-
-
-.recipebook {
-    width: 100%;
-    height: 100%;
-    border: none; /* Recommended to remove any default border */
 }
 
 .plate {
