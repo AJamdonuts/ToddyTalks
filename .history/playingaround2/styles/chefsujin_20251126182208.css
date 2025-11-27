@@ -1,0 +1,149 @@
+
+
+.tomato {
+    position: absolute;
+    width: 9.3vw;
+    height: auto;
+    left: 3.13vw;
+    top: 5.38vh;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+    transform: rotate(-24.58deg);
+}
+
+.potato {
+    position: absolute;
+    width: 11.45vw;
+    height: auto;
+    left: 10.14vw;
+    top: 15.73vh;
+}
+
+.leek {
+    position: absolute;
+    width: 17.91vw;
+    height: auto;
+    left: 7.64vw;
+    top: 1.95vh;
+    transform: rotate(-5.62deg);
+
+}
+
+.garlic {
+    position: absolute;
+    width: 13.53vw;
+    height: auto;
+    left: 13.93vw;
+    top: 7.31vh;
+    transform: rotate(-19.27deg);
+
+}
+
+.onion {
+    position: absolute;
+    width: 8.76vw;
+    height: auto;
+    left: 2.22vw;
+    top: 14.19vh;
+    transform: rotate(17.63deg);
+}
+
+
+.recipebook {
+    position: absolute;
+    width: 27.22vw;
+    height: auto;
+    left: 6.25vw;
+    top: 29.49vh;
+}
+
+.plate {
+    position: absolute;
+    width: 23.25vw;
+    height: auto;
+    left: 1.53vw;
+    top: 60.16vh;
+    transform: rotate(19.64deg);
+}
+
+
+
+.beararm1 {
+    position: absolute;
+    width: 31.15vw;
+    height: auto;
+    left: 11.04vw;
+    top: 38.28vh;
+    transform: matrix(0.95, 0.31, 0.31, -0.95, 0, 0);
+}
+
+.beararm2 {
+    position: absolute;
+    width: 36.65vw;
+    height: auto;
+    left: 80.56vw;
+    top: 48.53vh;
+    transform: rotate(90.11deg);
+}
+
+.fishpan {
+    position: absolute;
+    width: 37.98vw;
+    height: auto;
+    left: 36.94vw;
+    top: 25.10vh;
+    transform: rotate(-6.22deg);
+}
+
+.eggpan {
+    position: absolute;
+    width: 27.5vw;
+    height: auto;
+    left: 65.45vw;
+    top: 35.39vh;
+    transform: rotate(177.33deg);
+}
+
+.vegpan {
+    position: absolute;
+    width: 14.38vw;
+    height: auto;
+    left: 40.32vw;
+    top: 68.66vh;
+    transform: rotate(81.24deg);
+}
+
+.hob {
+    position: absolute;
+    width: 49.72vw;
+    height: auto;
+    left: 39.38vw;
+    top: 38.28vh;
+}
+
+body {
+    margin: 0;
+    background-image: url("/playingaround2/images/kitchencounter.jpg");
+    background-size: 100px 100px;
+    background-position: top left;
+    background-repeat: repeat;
+    width: 1440px;   /* your Figma width */
+    height: 1024px;  /* your Figma height */
+    overflow: hidden;
+}
+
+.creamtexture {
+    position: absolute;
+    width: 33.06vw;
+    height: 70.70vh;
+    left: -7.99vw;
+    top: 31.93vh;
+}
+
+.checktablecloth {
+    position: absolute;
+    width: 71.81vw;
+    height: 68.07vh;
+    left: 25.07vw;
+    top: 31.93vh;
+}

@@ -1,0 +1,309 @@
+
+html, body {
+    background-image: url('/playingaround2/images/kitchencounter.jpg');
+    background-repeat: repeat; /* repeat the image */
+    background-size: 300px 100px; /* set width and height for each tile */
+    background-position: top left; /* start tiling from top-left */
+    background-attachment: scroll; /* moves with page */
+    background-color: #ffffff; /* fallback color */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.page-background {
+    position: relative; /* Essential for absolute border elements (if you add them later) */
+    width: 100%;
+    height: 100%;
+    /* Add your overall background/border styles here */
+}
+
+
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Take up 100% of .page-background's height */
+    max-width: 1440px; /* Example: Limit the content width */
+    margin: 0 auto; 
+}
+
+main {
+    flex-grow: 1; 
+    position: relative; 
+}
+
+.canvas {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1440px;   /* design width */
+    height: 1000px;  /* design height */
+    transform-origin: top left; /* easier to work with scaling */
+    transform: translate(-50%, -50%) scale(var(--scale-factor, 1));
+    border: 4px solid red !important;
+    overflow: auto;
+}
+
+.canvas-content {
+    position: absolute;
+    left: 50px; /* adjust this number: 20px, 40px, 70px, etc. */
+    top: 0;
+}
+
+
+.tomato {
+    position: absolute;
+    width: 133.75px;
+    height: 133.75px;
+    left: 45.02px;
+    top: 55.06px;
+    background: url(tomato-removebg-preview.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+    transform: rotate(-24.58deg);
+}
+
+.potato {
+    position: absolute;
+    width: 165px;
+    height: 165px;
+    left: 146px;
+    top: 161px;
+    background: url(d95fa1e62c663504736614e026fc4862-removebg-preview.png);
+}
+
+.leek {
+    position: absolute;
+    width: 257.96px;
+    height: 257.96px;
+    left: 109.95px;
+    top: 20px;
+    background: url(leek-removebg-preview.png);
+    transform: rotate(-5.62deg);
+}
+
+.garlic {
+    position: absolute;
+    width: 194.8px;
+    height: 194.8px;
+    left: 200.62px;
+    top: 74.87px;
+    background: url(garlic-removebg-preview.png);
+    transform: rotate(-19.27deg);
+}
+
+.onion {
+    position: absolute;
+    width: 126.18px;
+    height: 144.28px;
+    left: 32px;
+    top: 145.3px;
+    background: url(onion-removebg-preview.png);
+    transform: rotate(17.63deg);
+    }
+
+.recipebook {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 90px;
+    top: 302px;
+}
+
+.plate {
+    position: absolute;
+    width: 334.76px;
+    height: 332.75px;
+    left: -40px;
+    top: 616px;
+    background: url(pxArt-removebg-preview.png);
+    transform: rotate(19.64deg);
+}
+
+.beararm1 {
+    position: absolute;
+    width: 448.49px;
+    height: 883.17px;
+    left: 132px;
+    top: 450px;
+    background: url(IMG_0236_2-removebg-preview.png);
+    transform: matrix(0.95, 0.31, 0.31, -0.95, 0, 0);
+}
+
+.beararm2 {
+    position: absolute;
+    width: 348.8px;
+    height: 764.5px;
+    left: 1000px;
+    top: 500px;
+    background: url(IMG_0236-removebg-preview.png);
+    transform: matrix(0.99, -0.13, -0.13, -0.99, 0, 0);
+}
+
+.fishpan {
+    position: absolute;
+    width: 546.95px;
+    height: 546.95px;
+    left: 460px;
+    top: 280px;
+    background: url(fishpan.png);
+    transform: rotate(-6.22deg);
+}
+
+.eggpan {
+    position: absolute;
+    width: 396px;
+    height: 396px;
+    left: 860px;
+    top: 362.44px;
+    background: url(pixil-frame-0-removebg-preview.png);
+    transform: rotate(177.33deg);
+}
+
+.vegpan {
+    position: absolute;
+    width: 207px;
+    height: 310px;
+    left: 560px;
+    top: 680px;
+    background: url(pxArt-2-removebg-preview.png);
+    transform: rotate(81.24deg);
+}
+
+.hob {
+    position: absolute;
+    width: 716px;
+    height: 632px;
+    left: 470px;
+    top: 392px;
+    background: url(pxArt-2.png);
+}
+
+.creamtexture {
+    position: absolute;
+    width: 476px;
+    height: 696px;
+    left: 0px;
+    bottom:0px;
+    top: 327px;
+    background: url(b41e50d46e26e9463ce130b2da7a46aa.jpg);
+}
+
+.checktablecloth {
+    position: absolute;
+    width: 900px;
+    height: 697px;
+    bottom: 0px;
+    top: 327px;
+    left: 420px;
+}
+
+
+footer {
+    flex-shrink: 0;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    box-sizing: border-box;
+    z-index: 1000;
+    position: ;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* text left, image right */
+  align-items: center;           /* vertically center text & image */
+  max-width: 100%; /* Keep it aligned with max width of canvas */
+  margin: 0 auto;
+}
+
+.footer-text {
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.footer-img {
+  width: 150px;                     /* size of your image */
+  height: auto;
+  cursor: pointer;                 /* shows it’s clickable */
+  transition: transform 0.3s;
+  padding: 0%;
+  margin: 0%;
+}
+
+.footer-img:hover {
+  transform: scale(1.1);           /* optional hover effect */
+}
+
+
+header {
+  text-align: center;
+  margin: 20px auto;
+  width: 100%;
+  border-radius: 15px;
+  background-image: url(/playingaround2/images/kitchencounter.jpg);
+
+  background-position: center;
+  box-shadow: 0 20px 10px rgba(0,0,0,0.1);
+  
+  /* Flex to center content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* IMAGE CONTAINER */
+.header-images {
+  position: fixed;       /* creates a frame for absolute children */
+  width: 120px;               /* how wide the image area is */
+  max-width: 120px;         /* don’t let it grow too large */ 
+  overflow: hidden;
+  height: 120px;              /* fixed height */
+}
+
+/* BOTH IMAGES STACKED ON TOP OF EACH OTHER */
+.header-images img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;              /* fill container */
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;               /* start hidden */
+  animation: swap 6s infinite; /* 6-second repeating animation */
+  transition: opacity 1s;
+}
+
+/* First image visible first */
+.header-images .img1 {
+  animation-delay: 0s;
+}
+
+/* Second image appears halfway through */
+.header-images .img2 {
+  animation-delay: 3s;
+}
+
+
+header h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'ToddyTalks';
+    color: burlywood;
+    text-shadow: 1px 6px brown;
+    letter-spacing: 10px;
+}
+
+/* Main section styles */
+main {
+  text-align: center;
+  margin: 20px auto;              /* space around the box */
+  width: 100%;                     /* take up 100% of the screen width */
+}

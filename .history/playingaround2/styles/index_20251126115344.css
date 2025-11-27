@@ -70,7 +70,7 @@ h1 {
 
 #Welcome a{
     color: var(--brown);
-    text-shadow: 2px 2px 2px burlywood;
+    text-shadow: 1px 1px 1px burlywood;
     text-decoration: none;
 }
 

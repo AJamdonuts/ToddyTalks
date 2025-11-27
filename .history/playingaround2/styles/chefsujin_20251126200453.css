@@ -1,0 +1,249 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+/* Add a main container to hold all your absolutely positioned elements */
+.canvas {
+    position: relative;
+    max-width: 1440px;
+    max-height: 1024px;
+    width: 100%;
+    height: 100%;
+    transform-origin: bottom left; 
+    transform: scale(var(--scale-factor, 1));
+}
+
+/* Use Flexbox on the body to center the .canvas element when it hits the max size */
+body {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-end;    /* Center vertically */
+    background-image: url('/playingaround2/images/kitchencounter.jpg'); /* Move background color here */
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+}
+.tomato {
+    position: absolute;
+    width: 133.75px;
+    height: 133.75px;
+    left: 45.02px;
+    top: 55.06px;
+    background: url(tomato-removebg-preview.png);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+    transform: rotate(-24.58deg);
+}
+
+.potato {
+    position: absolute;
+    width: 165px;
+    height: 165px;
+    left: 146px;
+    top: 161px;
+    background: url(d95fa1e62c663504736614e026fc4862-removebg-preview.png);
+}
+
+.leek {
+    position: absolute;
+    width: 257.96px;
+    height: 257.96px;
+    left: 109.95px;
+    top: 20px;
+    background: url(leek-removebg-preview.png);
+    transform: rotate(-5.62deg);
+}
+
+.garlic {
+    position: absolute;
+    width: 194.8px;
+    height: 194.8px;
+    left: 200.62px;
+    top: 74.87px;
+    background: url(garlic-removebg-preview.png);
+    transform: rotate(-19.27deg);
+}
+
+.onion {
+    position: absolute;
+    width: 126.18px;
+    height: 144.28px;
+    left: 32px;
+    top: 145.3px;
+    background: url(onion-removebg-preview.png);
+    transform: rotate(17.63deg);
+    }
+
+.recipebook {
+    position: absolute;
+    width: 392px;
+    height: 392px;
+    left: 90px;
+    top: 302px;
+}
+
+.plate {
+    position: absolute;
+    width: 334.76px;
+    height: 332.75px;
+    left: 22px;
+    top: 616px;
+    background: url(pxArt-removebg-preview.png);
+    transform: rotate(19.64deg);
+}
+
+.beararm1 {
+    position: absolute;
+    width: 448.49px;
+    height: 883.17px;
+    left: 132px;
+    top: 374px;
+    background: url(IMG_0236_2-removebg-preview.png);
+    transform: matrix(0.95, 0.31, 0.31, -0.95, 0, 0);
+}
+
+.beararm2 {
+    position: absolute;
+    width: 348.8px;
+    height: 764.5px;
+    left: 1062px;
+    top: 623px;
+    background: url(IMG_0236-removebg-preview.png);
+    transform: matrix(0.99, -0.13, -0.13, -0.99, 0, 0);
+}
+
+.fishpan {
+    position: absolute;
+    width: 546.95px;
+    height: 546.95px;
+    left: 532px;
+    top: 257px;
+    background: url(fishpan.png);
+    transform: rotate(-6.22deg);
+}
+
+.eggpan {
+    position: absolute;
+    width: 396px;
+    height: 396px;
+    left: 942.44px;
+    top: 362.44px;
+    background: url(pixil-frame-0-removebg-preview.png);
+    transform: rotate(177.33deg);
+}
+
+.vegpan {
+    position: absolute;
+    width: 207px;
+    height: 310px;
+    left: 580.54px;
+    top: 703.1px;
+    background: url(pxArt-2-removebg-preview.png);
+    transform: rotate(81.24deg);
+}
+
+.hob {
+position: absolute;
+width: 716px;
+height: 632px;
+left: 567px;
+top: 392px;
+background: url(pxArt-2.png);
+}
+
+.creamtexture {
+    position: absolute;
+    width: 476px;
+    height: 724px;
+    left: -115px;
+    top: 327px;
+    background: url(b41e50d46e26e9463ce130b2da7a46aa.jpg);
+}
+
+.checktablecloth {
+    position: absolute;
+    width: 1034px;
+    height: 697px;
+    left: 361px;
+    top: 327px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ====================================================================
+     Utility class: tiled background (small scale / repeated like a tile)
+
+     Usage:
+         - Add `class="tiled-bg"` to <body> or a container in your HTML
+         - Control the tile size by setting --tile-size (e.g. 80px or 150px)
+
+     Examples:
+         <body class="tiled-bg"> ... </body>
+         or
+         <div class="canvas tiled-bg"> ... </div>
+==================================================================== */
+.tiled-bg {
+        /* same image used elsewhere in this stylesheet; root-path (/) keeps your existing linking */
+        background-image: url('/playingaround2/images/kitchencounter.jpg');
+        background-repeat: repeat;        /* repeat the image as tiles */
+        background-position: top left;    /* start tiling from the top-left */
+        /* small tile size — change this via the CSS variable --tile-size */
+        background-size: var(--tile-size, 150px);
+        /* useful fallback: a background color behind tiles */
+        background-color: #f7f6f3;
+}
+
+.canvas {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    min-height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -52,6 +52,7 @@ function showScene() {
     document.getElementById("dialogue-box").style.display = "none";
     skipButton.style.display = "none";
     character.style.display = "none";
+
     const mainContent = document.querySelector('body'); // Replace 'body' with your main game container ID/class
 
     // Create the main task text container
@@ -68,6 +69,7 @@ function showScene() {
 
     // Add event listener to the button to change the webpage
     nextButton.addEventListener('click', () => {
+        // Change 'next_page.html' to the URL of your next webpage
         window.location.href = 'chefsujin.html'; 
     });
 
