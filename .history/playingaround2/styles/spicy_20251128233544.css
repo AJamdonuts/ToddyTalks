@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif, 'ToddyTalks';
+  background-image: url('/playingaround2/images/starred.jpg');  /* image behind wrapper */
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  font-weight: 800;
+}
+
+header {
+  text-align: center;
+  margin: 20px auto;
+  width: 100%;
+  border-radius: 15px;
+  background-image: url(/playingaround2/images/gifs/fire.gif);
+  
+
+  background-position: center;
+  box-shadow: 0 20px 10px rgba(0,0,0,0.1);
+  
+  /* Flex to center content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* IMAGE CONTAINER */
+.header-images {
+  position: relative;       /* creates a frame for absolute children */
+  width: 120px;               /* how wide the image area is */
+  max-width: 120px;         /* don’t let it grow too large */ 
+  overflow: hidden;
+  height: 120px;              /* fixed height */
+}
+
+
+/* Main section styles */
+main {
+  text-align: center;
+  margin: 20px auto;              /* space around the box */
+  width: 100%;                     /* take up 100% of the screen width */
+}
+
+
+
+footer {
+  background-image: url(/playingaround2/images/gifs/fire.gif);
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+/* Divider Image Between Sections */
+.section-divider {
+  text-align: center;
+}
+
+.section-divider {
+  width: 100%;                 /* full width of the screen */
+  height: 200px;               /* adjust height as needed */
+  background-image: url('/playingaround2/images/IMG_0227.PNG');  /* your divider image */
+  background-repeat: repeat-x;            /* repeat horizontally */
+  background-position: top center;        /* aligns image at top */
+  background-size: auto 300px;
+  transform: scaleX(-1);             /* keep aspect ratio, stretch height */                      /* space above/below */
+}
+
+
+.site-wrapper {
+  border-radius: 20px;       /* rounded corners for the whole site */            /* inner spacing */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.page-background {
+  width: 80%;
+  background-image: url('/playingaround2/images/backgrounds/spicy.jpg');
+  background-repeat: repeat; 
+  background-size: 25px 25px; 
+  border-radius: 20px;
+
+
+}
+
+  /*FONTS*/
+
+@font-face {
+  font-family: ToddyTalks; /* set name */
+  src: url(/playingaround2/fonts/akaDylan\ Plain.ttf); /* url of the font */
+}
+
+
+
+
+
+/* Kawaii Container */
+
+.kawaiicontainer {
+    width: 20px;
+    height: 20px;
+    position:absolute;
+    top: 0;
+    left: 0px;
+}
+
